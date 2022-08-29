@@ -7,6 +7,7 @@ public class ex3 {
         Scanner scanner = new Scanner(System.in);
         for (i = 0; i < 5; i++) {
             String modelo;
+
             float rend;
             System.out.print("Digite o modelo do " + (i + 1) + "º carro: \n");
             modelo = scanner.nextLine();
