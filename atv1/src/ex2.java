@@ -4,24 +4,22 @@ public class ex2 {
     public static void main(String[] args) {
         Random rand = new Random();
         int[] arr = new int[10];
-        int[] primos = new int[1];
+        boolean[] primos = new boolean[10];
         int count_primos = 0;
         for (int i = 0; i < arr.length; i++) {
             arr[i] = rand.nextInt(100);
-            for(int j = i; j > 0; j--){
+            primos[i] = true;
+            for(int j = (arr[i]-1); j > 1; j--){
                 if(arr[i]%j == 0){
-                    count_primos++;
-                    int[] aux = new int[count_primos];
-                    aux = primos;
-                        
-                    primos = new int[count_primos];
-                    primos = aux;
-                    break;
+                    primos[i] = false;
                 }
             }
         }
         for (int i = 0; i < primos.length; i++){
-            System.out.print(primos[i]);
+            if(primos[i]){
+                System.out.print(i+" -> "+ arr[i] + "\n");
+            }
+
         }
         
     }
