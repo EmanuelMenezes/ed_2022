@@ -2,7 +2,7 @@ import java.io.IOException;
 import java.util.Random;
 import java.util.Scanner;
 
-public class App {
+public class Main {
     public static void main(String[] args) throws Exception {
         TContaBancaria[] contas = new TContaBancaria[0];
         TContaBancaria contaLogada;
@@ -89,6 +89,7 @@ public class App {
             mostrarOperacoes();
             controleMenu = scanner.nextLine();
         }
+        scanner.close();
     }
 
     public static void mostrarOperacoes() {
